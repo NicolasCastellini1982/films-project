@@ -13,5 +13,9 @@ const RootProvider = ({ children }) => {
     </AuthProvider>
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 09d6f3475cf093be4b0fdf587f0d9996458620b4
 
 export default RootProvider;

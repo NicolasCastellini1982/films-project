@@ -1,9 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomeView from "../../features/home/views/home_view";
-import PrivateRoute from "../../features/auth/components/private_route";
-import PublicRoute from "../../features/auth/components/public_route";
-import LoginView from "../../features/auth/views/login/views/login_view";
+import HomeView from "../features/home/views/home_view";
+import LoginView from "../features/login/views/login_view";
+import PrivateRoute from "../auth/components/private_route";
 
+
+
+// createBrowserRouter es una funcion que recibe un arreglo de rutas
 export const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -15,15 +17,7 @@ export const appRouter = createBrowserRouter([
   },
   {
     path: "/login",
-    element: (
-      <PublicRoute>
-        <LoginView />
-      </PublicRoute>
-    ),
-  },
-  // 404
-  {
-    path: "*",
-    element: <div>No se encontro la pagina</div>,
-  },
-]);
+    element: <LoginView/>,
+
+ }
+])
