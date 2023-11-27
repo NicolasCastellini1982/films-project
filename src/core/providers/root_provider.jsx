@@ -1,12 +1,17 @@
-import React from 'react'
-import { AuthProvider } from '../auth/provider/auth_provider'
+import { AuthProvider } from "../../features/auth/provider/auth_provider";
 
-const RootProvider = ({children}) => {
+const RootProvider = ({ children }) => {
   return (
-  <AuthProvider>
-    {children}
-  </AuthProvider>
-  )
-}
+    <AuthProvider
+      fallback={
+        <div>
+          <h1>Cargando...</h1>
+        </div>
+      }
+    >
+      {children}
+    </AuthProvider>
+  );
+};
 
-export default RootProvider
+export default RootProvider;
