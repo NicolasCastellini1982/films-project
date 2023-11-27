@@ -13,6 +13,15 @@ export const appRouter = createBrowserRouter([
       </PrivateRoute>
     ),
   },
+  
+  {
+    path: "/",
+    element: (
+      <PrivateRoute>
+        <HomeView />
+      </PrivateRoute>
+    ),
+  },
   {
     path: "/login",
     element: (

@@ -1,8 +1,5 @@
-import {
-    tmdb_api,
-    
-    tmdb_paths
-  } from "../../../core/datasource/remote/tmdb/tmdb_api";
+
+import { tmdb_api, tmdb_paths } from "../../../core/datasources/remote/tmdb/tmdb_api";
 import { tdmbMoviesTvAdapter } from "../../adapters/tmdb.adapters";
  
    
@@ -10,6 +7,6 @@ import { tdmbMoviesTvAdapter } from "../../adapters/tmdb.adapters";
     const { data } = await tmdb_api.get(tmdb_paths.movies.popular);
     console.log("data", data);
   
-    return tdmbMoviesTvAdapter(data);
-  };
-  
+    return tdmbMoviesTvAdapter(data)
+
+  }
