@@ -1,6 +1,6 @@
 * ,
 *::before,
-*::after{
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -21,4 +21,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  color: white;
 }
